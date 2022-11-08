@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GuitarCard component matches snapshot 1`] = `
+<div
+  className="card card"
+>
+  <div
+    className="card-img p-3"
+  >
+    <img
+      alt="Gibson ES-335 Semi-hollowbody Electric Guitar - Sixties Cherry"
+      className="card-img-top img-fluid"
+      src="./img/Gibson ES-335 Semi-hollowbody Electric Guitar - Sixties Cherry.webp"
+    />
+  </div>
+  <div
+    className="card-body text-center"
+  >
+    <h6
+      className="card-title"
+    >
+      Gibson ES-335 Semi-hollowbody Electric Guitar - Sixties Cherry
+    </h6>
+    <h2
+      className="card-title"
+    >
+      $3,499.00
+    </h2>
+    <button
+      className="btn btn-primary m-2"
+      onClick={[Function]}
+      type="button"
+    >
+      Add to cart
+    </button>
+  </div>
+</div>
+`;
+
+exports[`GuitarCard component renders title 1`] = `
+<div
+  className="card card"
+>
+  <div
+    className="card-img p-3"
+  >
+    <img
+      alt="Gibson ES-335 Semi-hollowbody Electric Guitar - Sixties Cherry"
+      className="card-img-top img-fluid"
+      src="./img/Gibson ES-335 Semi-hollowbody Electric Guitar - Sixties Cherry.webp"
+    />
+  </div>
+  <div
+    className="card-body text-center"
+  >
+    <h6
+      className="card-title"
+    >
+      Gibson ES-335 Semi-hollowbody Electric Guitar - Sixties Cherry
+    </h6>
+    <h2
+      className="card-title"
+    >
+      $3,499.00
+    </h2>
+    <button
+      className="btn btn-primary m-2"
+      onClick={[Function]}
+      type="button"
+    >
+      Add to cart
+    </button>
+  </div>
+</div>
+`;

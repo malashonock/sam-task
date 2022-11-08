@@ -1,0 +1,10 @@
+.card {
+  width: 300px;
+  min-width: 300px;
+  transition: 0.25s ease;
+
+  &:hover {
+    filter: drop-shadow(0 0 3px grey);
+    transition: 0.25s ease;
+  }
+}
