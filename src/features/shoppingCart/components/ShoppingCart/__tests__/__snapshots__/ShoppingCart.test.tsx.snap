@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItemsCounter component matches snapshot 1`] = `
+<i
+  className="bi bi-cart4 position-relative"
+/>
+`;
+
+exports[`ShoppingCart component matches snapshot 1`] = `
+<i
+  className="bi bi-cart4 position-relative"
+/>
+`;
