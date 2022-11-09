@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react';
-import TestApp from '../../../../../mockdata/TestApp';
-import mockGuitarRepositoryFactory from '../../../../../mockdata/mockGuitarRepositoryFactory';
+import TestApp from 'mockdata/TestApp';
+import mockGuitarRepositoryFactory from 'mockdata/mockGuitarRepositoryFactory';
 import GuitarCardList from '../GuitarCardList';
-import mockGuitars from '../../../../../mockdata/mockGuitars';
-import mockGuitarFilters from '../../../../../mockdata/mockGuitarFilters';
+import mockGuitars from 'mockdata/mockGuitars';
+import mockGuitarFilters from 'mockdata/mockGuitarFilters';
 
 describe('GuitarCardList component', () => {
   describe('given no guitars available in repository', () => {

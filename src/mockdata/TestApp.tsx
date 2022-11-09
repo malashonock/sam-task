@@ -1,9 +1,9 @@
 import { PropsWithChildren } from 'react';
-import GuitarFilters from '../features/filtering/model/GuitarFilters';
-import GuitarRepository from '../features/guitars/model/GuitarRepository';
-import ShoppingCart from '../features/shoppingCart/model/ShoppingCart';
-import GuitarSorting from '../features/sorting/model/GuitarSorting';
-import { Nullable } from '../utils/Nullable';
+import GuitarFilters from 'features/filtering/model/GuitarFilters';
+import GuitarRepository from 'features/guitars/model/GuitarRepository';
+import ShoppingCart from 'features/shoppingCart/model/ShoppingCart';
+import GuitarSorting from 'features/sorting/model/GuitarSorting';
+import { Nullable } from 'utils/Nullable';
 import MockFilterContextProvider from './MockFilterContextProvider';
 import mockGuitarFilters from './mockGuitarFilters';
 import mockGuitarRepositoryFactory from './mockGuitarRepositoryFactory';

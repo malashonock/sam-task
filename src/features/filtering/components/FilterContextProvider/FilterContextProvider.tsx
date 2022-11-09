@@ -1,12 +1,9 @@
 import { PropsWithChildren, useContext, useEffect, useState } from 'react';
 import FilterContext from '../../model/FilterContext';
-import GuitarContext from '../../../guitars/model/GuitarContext';
 import GuitarFilters from '../../model/GuitarFilters';
-import GuitarRepository from '../../../guitars/model/GuitarRepository';
-import {
-  parseJsonFromLocalStorage,
-  saveJsonToLocalStorage,
-} from '../../../../utils/local-storage-utils';
+import GuitarContext from 'features/guitars/model/GuitarContext';
+import GuitarRepository from 'features/guitars/model/GuitarRepository';
+import { parseJsonFromLocalStorage, saveJsonToLocalStorage } from 'utils/local-storage-utils';
 
 function initFilters(fallback: GuitarFilters): GuitarFilters {
   return parseJsonFromLocalStorage<GuitarFilters>('filters', fallback);

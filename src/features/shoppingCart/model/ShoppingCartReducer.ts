@@ -11,7 +11,7 @@ export function shoppingCartReducer(
   shoppingCart: ShoppingCart,
   action: ShoppingCartAction
 ): ShoppingCart {
-  const maxItemCount: number = 20;
+  const maxItemCount = 20;
 
   switch (action.type) {
     case 'add':

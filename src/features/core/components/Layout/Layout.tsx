@@ -1,10 +1,10 @@
-import FilterList from '../../../filtering/components/FilterList/FilterList';
-import SearchBox from '../../../filtering/components/SearchBox/SearchBox';
-import GuitarCardList from '../../../guitars/components/GuitarCardList/GuitarCardList';
-import ResetButton from '../../../reset/components/ResetButton/ResetButton';
-import CartOverflowToast from '../../../shoppingCart/components/CartOverflowToast/CartOverflowToast';
-import ShoppingCart from '../../../shoppingCart/components/ShoppingCart/ShoppingCart';
-import Sorter from '../../../sorting/components/Sorter/Sorter';
+import FilterList from 'features/filtering/components/FilterList/FilterList';
+import SearchBox from 'features/filtering/components/SearchBox/SearchBox';
+import GuitarCardList from 'features/guitars/components/GuitarCardList/GuitarCardList';
+import ResetButton from 'features/reset/components/ResetButton/ResetButton';
+import CartOverflowToast from 'features/shoppingCart/components/CartOverflowToast/CartOverflowToast';
+import ShoppingCart from 'features/shoppingCart/components/ShoppingCart/ShoppingCart';
+import Sorter from 'features/sorting/components/Sorter/Sorter';
 import styles from './Layout.module.scss';
 
 export default function Layout(): JSX.Element {

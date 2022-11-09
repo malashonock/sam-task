@@ -1,79 +1,52 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "jest": true
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "root": true,
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "globals": {
-        "JSX": "readonly"
-    },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:react-hooks/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "airbnb",
-        "plugin:prettier/recommended",
-        "prettier"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "sourceType": "module",
-        "project": [
-            "./tsconfig.json"
-        ]
-    },
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-        "import",
-        "prettier"
-    ],
-    "rules": {
-        "no-unused-vars": "warn",
-        "no-case-declarations": "off",
-        "react/react-in-jsx-scope": "off",
-        "react/no-unescaped-entities": "off",
-        "@typescript-eslint/no-explicit-any": "error",
-        "@typescript-eslint/no-inferrable-types": "off",
-        "lines-between-class-members": [
-            "error",
-            "always",
-            {
-                "exceptAfterSingleLine": true
-            }
-        ],
-        "import/extensions": "off",
-        "react/jsx-filename-extension": [
-            1,
-            {
-                "extensions": [
-                    ".js",
-                    ".jsx",
-                    ".ts",
-                    ".tsx"
-                ]
-            }
-        ],
-        "react/jsx-no-constructed-context-values": "off",
-        "react/jsx-no-bind": "off",
-        "react/require-default-props": "off"
-    },
+    "ecmaVersion": "latest",
+		"sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint", "react", "prettier", "react-hooks"
+  ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "comma-dangle": ["error", "only-multiline"],
+    "react/prop-types": "off",
+    "react/display-name": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/ban-ts-comment": "error",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-var-reqiures": "off",
+    "@typescript-eslint/no-inferrable-types": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
+  },
     "settings": {
-        "import/resolver": {
-            "node": {
-                "extensions": [
-                    ".js",
-                    ".jsx",
-                    ".ts",
-                    ".tsx"
-                ]
-            }
+        "react": {
+            "pragma": "React",
+            "version": "detect"
         }
     }
 }

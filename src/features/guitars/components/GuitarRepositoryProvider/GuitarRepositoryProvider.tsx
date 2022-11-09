@@ -1,7 +1,7 @@
 import { PropsWithChildren, useEffect, useState } from 'react';
 import GuitarContext from '../../model/GuitarContext';
 import Guitar from '../../model/Guitar';
-import Range from '../../../../utils/Range';
+import Range from 'utils/Range';
 import {
   getBrands,
   getCategories,

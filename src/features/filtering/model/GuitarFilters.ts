@@ -1,4 +1,4 @@
-import Range from '../../../utils/Range';
+import Range from 'utils/Range';
 
 export default interface GuitarFilters {
   [key: string]: unknown;

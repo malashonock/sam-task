@@ -1,8 +1,8 @@
 import './Sorter.scss';
 import { MDCSelect } from '@material/select';
 import { useRef, useContext, useEffect, useCallback, MutableRefObject } from 'react';
-import { Nullable, Undefinable } from '../../../../utils/Nullable';
-import useFirstRender from '../../../../utils/useFirstRender';
+import { Nullable, Undefinable } from 'utils/Nullable';
+import useFirstRender from 'utils/useFirstRender';
 import GuitarSorting, { SortedProperty, SortingOrder } from '../../model/GuitarSorting';
 import SortingContext, { SortingState } from '../../model/SortingContext';
 import sortingMapper from '../../model/SortingMapper';

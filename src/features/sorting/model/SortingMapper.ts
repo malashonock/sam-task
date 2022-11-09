@@ -1,4 +1,4 @@
-import Guitar from '../../guitars/model/Guitar';
+import Guitar from 'features/guitars/model/Guitar';
 import { SortedProperty, SortingOrder } from './GuitarSorting';
 
 export interface SortingMapping {

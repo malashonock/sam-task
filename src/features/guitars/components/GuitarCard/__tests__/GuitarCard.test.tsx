@@ -1,9 +1,9 @@
 import renderer from 'react-test-renderer';
 import { render } from '@testing-library/react';
 import GuitarCard from '../GuitarCard';
-import mockGuitars from '../../../../../mockdata/mockGuitars';
-import MockShoppingCartContextProvider from '../../../../../mockdata/MockShoppingCartContextProvider';
-import mockShoppingCarts from '../../../../../mockdata/mockShoppingCarts';
+import mockGuitars from 'mockdata/mockGuitars';
+import MockShoppingCartContextProvider from 'mockdata/MockShoppingCartContextProvider';
+import mockShoppingCarts from 'mockdata/mockShoppingCarts';
 
 describe('GuitarCard component', () => {
   it('matches snapshot', () => {

@@ -1,7 +1,7 @@
 import { useCallback, useContext } from 'react';
 import ShoppingCartContext, {
   ShoppingCartState,
-} from '../../../shoppingCart/model/ShoppingCartContext';
+} from 'features/shoppingCart/model/ShoppingCartContext';
 import Guitar, { areGuitarsEqual } from '../../model/Guitar';
 import styles from './GuitarCard.module.scss';
 

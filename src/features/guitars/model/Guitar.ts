@@ -1,5 +1,5 @@
-import { Nullable } from '../../../utils/Nullable';
-import { EqualityComparer } from '../../../utils/Comparer';
+import { Nullable } from 'utils/Nullable';
+import { EqualityComparer } from 'utils/Comparer';
 
 export default interface Guitar {
   [key: string]: unknown;

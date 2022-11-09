@@ -1,4 +1,4 @@
-import ShoppingCart from '../features/shoppingCart/model/ShoppingCart';
+import ShoppingCart from 'features/shoppingCart/model/ShoppingCart';
 import mockGuitars from './mockGuitars';
 
 const mockShoppingCarts: { [name: string]: ShoppingCart } = {

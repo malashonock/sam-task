@@ -1,5 +1,5 @@
-import GuitarSorting from '../features/sorting/model/GuitarSorting';
-import { Nullable } from '../utils/Nullable';
+import GuitarSorting from 'features/sorting/model/GuitarSorting';
+import { Nullable } from 'utils/Nullable';
 
 const mockGuitarSorting: { [name: string]: Nullable<GuitarSorting> } = {
   none: null,

@@ -1,7 +1,7 @@
 import { PropsWithChildren, useState } from 'react';
-import SortingContext from '../features/sorting/model/SortingContext';
-import GuitarSorting from '../features/sorting/model/GuitarSorting';
-import { Nullable } from '../utils/Nullable';
+import SortingContext from 'features/sorting/model/SortingContext';
+import GuitarSorting from 'features/sorting/model/GuitarSorting';
+import { Nullable } from 'utils/Nullable';
 
 export default function MockSortingContextProvider({
   mockSorting,

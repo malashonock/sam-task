@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from 'react';
 import FilterContext, { FiltersState } from '../../model/FilterContext';
 import GuitarFilters from '../../model/GuitarFilters';
-import Range from '../../../../utils/Range';
-import deepClone from '../../../../utils/deepClone';
-import { toKebabCase, toSentenceCase } from '../../../../utils/case-translator';
+import Range from 'utils/Range';
+import deepClone from 'utils/deepClone';
+import { toKebabCase, toSentenceCase } from 'utils/case-translator';
 import RangeSlider from '../RangeSlider/RangeSlider';
 
 interface RangeFilterProps {

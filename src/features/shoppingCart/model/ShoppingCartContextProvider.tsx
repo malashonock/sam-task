@@ -1,8 +1,5 @@
 import { PropsWithChildren, useEffect, useReducer } from 'react';
-import {
-  parseJsonFromLocalStorage,
-  saveJsonToLocalStorage,
-} from '../../../utils/local-storage-utils';
+import { parseJsonFromLocalStorage, saveJsonToLocalStorage } from 'utils/local-storage-utils';
 import ShoppingCart from './ShoppingCart';
 import ShoppingCartContext from './ShoppingCartContext';
 import { shoppingCartReducer } from './ShoppingCartReducer';
