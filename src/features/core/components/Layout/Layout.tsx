@@ -5,6 +5,7 @@ import ResetButton from '../../../reset/components/ResetButton/ResetButton';
 import CartOverflowToast from '../../../shoppingCart/components/CartOverflowToast/CartOverflowToast';
 import ShoppingCart from '../../../shoppingCart/components/ShoppingCart/ShoppingCart';
 import Sorter from '../../../sorting/components/Sorter/Sorter';
+import styles from './Layout.module.scss';
 
 export default function Layout(): JSX.Element {
   return (
@@ -42,9 +43,14 @@ export default function Layout(): JSX.Element {
           </a>
           <p className="year">2022</p>
         </div>
-        <div className="rs-school-logo">
-          <a href="https://rs.school/js/" target="_blank" rel="noopener noreferrer">
-            <img src="./img/rs_school_js.svg" alt="rs-school-logo" width="100" />
+        <div className="logo">
+          <a href="https://sam-solutions.by/" target="_blank" rel="noopener noreferrer">
+            <img
+              className={styles.logo__img}
+              src="./img/sam-logo.svg"
+              alt="sam-solutions-logo"
+              width="100"
+            />
           </a>
         </div>
       </footer>
