@@ -2,8 +2,9 @@ import Guitar from '../../guitars/model/Guitar';
 import ShoppingCart from './ShoppingCart';
 
 export type ShoppingCartAction =
-  | { type: 'add'; item: Guitar }
-  | { type: 'remove'; item: Guitar }
+  | { type: 'addItem'; item: Guitar }
+  | { type: 'removeItem'; item: Guitar }
+  | { type: 'removeLineItem'; item: Guitar }
   | { type: 'clearItems' }
   | { type: 'clearOverflow' };
 
@@ -12,12 +13,16 @@ export function shoppingCartReducer(
   action: ShoppingCartAction
 ): ShoppingCart {
   switch (action.type) {
-    case 'add':
+    case 'addItem':
       shoppingCart.addItem(action.item);
       return shoppingCart.clone();
 
-    case 'remove':
+    case 'removeItem':
       shoppingCart.removeItem(action.item);
+      return shoppingCart.clone();
+
+    case 'removeLineItem':
+      shoppingCart.removeLineItem(action.item);
       return shoppingCart.clone();
 
     case 'clearItems':

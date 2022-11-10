@@ -13,7 +13,7 @@ export default function CartItem({ item }: CartItemProps): JSX.Element {
   const { dispatchShoppingCartAction } = useContext(ShoppingCartContext) as ShoppingCartState;
 
   const handleRemove = (): void => {
-    dispatchShoppingCartAction({ type: 'remove', item: item.sku });
+    dispatchShoppingCartAction({ type: 'removeLineItem', item: item.sku });
   };
 
   return (

@@ -79,6 +79,23 @@ export default class ShoppingCart implements IShoppingCart {
     }
   }
 
+  removeLineItem(itemToRemove: Guitar): void {
+    const lineItemToDecrementIndex = this.findLineItemIndex(itemToRemove);
+
+    if (lineItemToDecrementIndex < 0) {
+      // no such item, nothing to remove
+      return;
+    }
+
+    const lineItemToDecrementQuantity = this.lineItems[lineItemToDecrementIndex].quantity;
+
+    // decrease item count by the quantity of line item being removed
+    this.itemsCount -= lineItemToDecrementQuantity;
+
+    // remove line item
+    this.lineItems.splice(lineItemToDecrementIndex, 1);
+  }
+
   clone(): ShoppingCart {
     return new ShoppingCart([...this.lineItems], this.itemsCount, this.pendingOverflow);
   }

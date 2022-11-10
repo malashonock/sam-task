@@ -23,12 +23,8 @@ export default function GuitarCard({ guitar }: GuitarCardProps): JSX.Element {
   }, [guitar, shoppingCart]);
 
   const handleShoppingCartToggle = useCallback((): void => {
-    if (!isInCart) {
-      dispatchShoppingCartAction({ type: 'add', item: guitar });
-    } else {
-      dispatchShoppingCartAction({ type: 'remove', item: guitar });
-    }
-  }, [dispatchShoppingCartAction, guitar, isInCart]);
+    dispatchShoppingCartAction({ type: 'addItem', item: guitar });
+  }, [dispatchShoppingCartAction, guitar]);
 
   return (
     <div className={['card', styles.card].join(' ')}>
@@ -40,10 +36,10 @@ export default function GuitarCard({ guitar }: GuitarCardProps): JSX.Element {
         <h2 className="card-title">{getCurrencyString(price)}</h2>
         <button
           type="button"
-          className={`btn btn-${isInCart ? 'danger' : 'primary'} m-2`}
+          className={`btn btn-${isInCart ? 'warning' : 'primary'} m-2`}
           onClick={handleShoppingCartToggle}
         >
-          {isInCart ? 'Remove from cart' : 'Add to cart'}
+          {isInCart ? 'Add one more' : 'Add to cart'}
         </button>
       </div>
     </div>
