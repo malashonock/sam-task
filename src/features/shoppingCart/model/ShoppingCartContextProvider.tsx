@@ -10,8 +10,8 @@ function initShoppingCart(): ShoppingCart {
     new ShoppingCart()
   );
 
-  const { lineItems, itemsCount, pendingOverflow } = shoppingCartDto;
-  return new ShoppingCart(lineItems, itemsCount, pendingOverflow);
+  const { lineItems, itemsCount, totalAmount, pendingOverflow } = shoppingCartDto;
+  return new ShoppingCart(lineItems, itemsCount, totalAmount, pendingOverflow);
 }
 
 function saveShoppingCart(shoppingCartToSave: ShoppingCart): void {

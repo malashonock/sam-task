@@ -23,7 +23,7 @@ const mockShoppingCarts: { [name: string]: ShoppingCart } = {
   oneGuitarNoOverflow: mapGuitarsToShoppingCart(mockGuitars.oneGuitar),
   oneGuitarPendingOverflow: mapGuitarsToShoppingCart(
     mockGuitars.oneGuitar,
-    new ShoppingCart([], 0, true)
+    new ShoppingCart([], 0, 0, true)
   ),
 };
 

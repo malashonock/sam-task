@@ -3,15 +3,15 @@ import ShoppingCartContext, {
 } from 'features/shoppingCart/model/ShoppingCartContext';
 import { useState } from 'react';
 import { useContext } from 'react';
+import getCurrencyString from 'utils/currency-format';
 import CartItems from '../CartItems/CartItems';
 import CheckoutToast from '../CheckoutToast/CheckoutToast';
 import ShoppingCart from '../ShoppingCart/ShoppingCart';
 
 export default function Checkout(): JSX.Element {
-  const {
-    shoppingCart: { itemsCount },
-    dispatchShoppingCartAction,
-  } = useContext(ShoppingCartContext) as ShoppingCartState;
+  const { shoppingCart, dispatchShoppingCartAction } = useContext(
+    ShoppingCartContext
+  ) as ShoppingCartState;
 
   const [showToast, setShowToast] = useState(false);
 
@@ -31,9 +31,12 @@ export default function Checkout(): JSX.Element {
         <ShoppingCart />
       </div>
       <CartItems />
+      <p className="checkout__total fs-5 fw-bold my-2">
+        Total: {getCurrencyString(shoppingCart.totalAmount)}
+      </p>
       <button
         className="checkout__btn btn btn-success mt-auto"
-        disabled={itemsCount === 0}
+        disabled={shoppingCart.itemsCount === 0}
         onClick={handleCheckout}
       >
         Checkout

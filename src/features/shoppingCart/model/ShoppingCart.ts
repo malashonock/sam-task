@@ -4,6 +4,7 @@ import ShoppingCartLineItem from './ShoppingCartLineItem';
 export interface IShoppingCart {
   lineItems: ShoppingCartLineItem[];
   itemsCount: number;
+  totalAmount: number;
   pendingOverflow: boolean;
 }
 
@@ -13,10 +14,12 @@ export default class ShoppingCart implements IShoppingCart {
   constructor(
     public lineItems: ShoppingCartLineItem[] = [],
     public itemsCount: number = 0,
+    public totalAmount: number = 0,
     public pendingOverflow: boolean = false
   ) {
     this.lineItems = lineItems;
     this.itemsCount = itemsCount;
+    this.totalAmount = totalAmount;
     this.pendingOverflow = pendingOverflow;
   }
 
@@ -39,8 +42,9 @@ export default class ShoppingCart implements IShoppingCart {
 
     const lineItemToIncrementIndex = this.findLineItemIndex(itemToAdd);
 
-    // increment items count
+    // increment items count & increase total
     this.itemsCount++;
+    this.totalAmount += itemToAdd.price;
 
     // such line item already exists?
     if (lineItemToIncrementIndex >= 0) {
@@ -64,8 +68,9 @@ export default class ShoppingCart implements IShoppingCart {
       return;
     }
 
-    // in any case, decrement items count
+    // in any case, decrement items count and reduce total
     this.itemsCount--;
+    this.totalAmount -= itemToRemove.price;
 
     const lineItemToDecrementQuantity = this.lineItems[lineItemToDecrementIndex].quantity;
 
@@ -91,12 +96,18 @@ export default class ShoppingCart implements IShoppingCart {
 
     // decrease item count by the quantity of line item being removed
     this.itemsCount -= lineItemToDecrementQuantity;
+    this.totalAmount -= lineItemToDecrementQuantity * itemToRemove.price;
 
     // remove line item
     this.lineItems.splice(lineItemToDecrementIndex, 1);
   }
 
   clone(): ShoppingCart {
-    return new ShoppingCart([...this.lineItems], this.itemsCount, this.pendingOverflow);
+    return new ShoppingCart(
+      [...this.lineItems],
+      this.itemsCount,
+      this.totalAmount,
+      this.pendingOverflow
+    );
   }
 }
