@@ -8,7 +8,7 @@ export default function ShoppingCart(): JSX.Element {
   }: ShoppingCartState = useContext(ShoppingCartContext) as ShoppingCartState;
 
   return (
-    <i className="bi bi-cart4 position-relative">
+    <i className="bi bi-cart4 position-relative fs-2">
       {itemsCount > 0 && <CartItemsCounter count={itemsCount} />}
     </i>
   );

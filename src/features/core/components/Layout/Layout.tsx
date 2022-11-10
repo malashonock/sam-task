@@ -4,7 +4,6 @@ import GuitarCardList from 'features/guitars/components/GuitarCardList/GuitarCar
 import ResetButton from 'features/reset/components/ResetButton/ResetButton';
 import CartOverflowToast from 'features/shoppingCart/components/CartOverflowToast/CartOverflowToast';
 import Checkout from 'features/shoppingCart/components/Checkout/Checkout';
-import ShoppingCart from 'features/shoppingCart/components/ShoppingCart/ShoppingCart';
 import Sorter from 'features/sorting/components/Sorter/Sorter';
 import styles from './Layout.module.scss';
 
@@ -13,10 +12,7 @@ export default function Layout(): JSX.Element {
     <>
       <header>
         <div className="row py-4">
-          <h1 className="display-5 col">Welcome to Guitar Heaven Shop!</h1>
-          <div className="col-1 display-4 d-flex justify-content-end align-items-center">
-            <ShoppingCart />
-          </div>
+          <h1 className="display-5 col text-center">Welcome to Guitar Heaven Shop!</h1>
         </div>
       </header>
       <main className="row">
