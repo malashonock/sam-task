@@ -1,11 +1,9 @@
-/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import './SearchBox.scss';
 import { MDCTextField } from '@material/textfield';
 import { MutableRefObject, useCallback, useContext, useEffect, useRef } from 'react';
-import deepClone from '../../../../utils/deepClone';
-import { Nullable, Undefinable } from '../../../../utils/Nullable';
-import useFirstRender from '../../../../utils/useFirstRender';
+import deepClone from 'utils/deepClone';
+import { Nullable, Undefinable } from 'utils/Nullable';
+import useFirstRender from 'utils/useFirstRender';
 import FilterContext, { FiltersState } from '../../model/FilterContext';
 import GuitarFilters from '../../model/GuitarFilters';
 
@@ -58,7 +56,7 @@ export default function SearchBox(): JSX.Element {
 
   return (
     <div
-      className="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon mdc-text-field--with-trailing-icon m-3"
+      className="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon mdc-text-field--with-trailing-icon my-3"
       ref={textFieldRootRef}
     >
       <i className="material-icons mdc-text-field__icon mdc-text-field__icon--leading">search</i>

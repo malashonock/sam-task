@@ -1,7 +1,7 @@
 import { useContext, useEffect, useMemo, useReducer } from 'react';
 import GuitarContext from '../../model/GuitarContext';
-import FilterContext, { FiltersState } from '../../../filtering/model/FilterContext';
-import SortingContext, { SortingState } from '../../../sorting/model/SortingContext';
+import FilterContext, { FiltersState } from 'features/filtering/model/FilterContext';
+import SortingContext, { SortingState } from 'features/sorting/model/SortingContext';
 import Guitar from '../../model/Guitar';
 import GuitarRepository from '../../model/GuitarRepository';
 import { guitarListReducer } from '../../model/GuitarListReducer';

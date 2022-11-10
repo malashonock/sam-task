@@ -1,4 +1,4 @@
-import GuitarFilters, { defaultGuitarFilters } from '../features/filtering/model/GuitarFilters';
+import GuitarFilters, { defaultGuitarFilters } from 'features/filtering/model/GuitarFilters';
 
 const mockGuitarFilters: { [name: string]: GuitarFilters } = {
   none: { ...defaultGuitarFilters },

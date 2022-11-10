@@ -1,12 +1,12 @@
 import Guitar from './Guitar';
-import GuitarFilters from '../../filtering/model/GuitarFilters';
-import GuitarSorting from '../../sorting/model/GuitarSorting';
-import Range from '../../../utils/Range';
-import { SortingMapper, SortingMapping } from '../../sorting/model/SortingMapper';
-import { SortingComparer } from '../../../utils/Comparer';
-import deepClone from '../../../utils/deepClone';
-import distinct from '../../../utils/distinct';
-import { Nullable, Undefinable } from '../../../utils/Nullable';
+import GuitarFilters from 'features/filtering/model/GuitarFilters';
+import GuitarSorting from 'features/sorting/model/GuitarSorting';
+import Range from 'utils/Range';
+import { SortingMapper, SortingMapping } from 'features/sorting/model/SortingMapper';
+import { SortingComparer } from 'utils/Comparer';
+import deepClone from 'utils/deepClone';
+import distinct from 'utils/distinct';
+import { Nullable, Undefinable } from 'utils/Nullable';
 
 export async function loadGuitarsAsync(url: string): Promise<Guitar[]> {
   try {
@@ -32,7 +32,7 @@ export function getColors(guitars: Guitar[]): string[] {
 }
 
 export function getPriceRange(guitars: Guitar[]): Range<number> {
-  let maxPrice: number = 0;
+  let maxPrice = 0;
 
   guitars.forEach((guitar: Guitar): void => {
     if (guitar.price > maxPrice) {

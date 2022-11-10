@@ -1,7 +1,7 @@
 import { ChangeEvent } from 'react';
 import { CheckedChangedEvent } from '../../model/CheckedChangedEvent';
-import { EventCallback } from '../../../../utils/EventCallback';
-import { toKebabCase, toSentenceCase } from '../../../../utils/case-translator';
+import { EventCallback } from 'utils/EventCallback';
+import { toKebabCase, toSentenceCase } from 'utils/case-translator';
 
 interface FilterOptionProps {
   value: string;

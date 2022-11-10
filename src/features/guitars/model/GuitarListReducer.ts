@@ -1,10 +1,10 @@
 import Guitar from './Guitar';
-import GuitarFilters from '../../filtering/model/GuitarFilters';
-import GuitarSorting from '../../sorting/model/GuitarSorting';
-import sortingMapper from '../../sorting/model/SortingMapper';
+import GuitarFilters from 'features/filtering/model/GuitarFilters';
+import GuitarSorting from 'features/sorting/model/GuitarSorting';
+import sortingMapper from 'features/sorting/model/SortingMapper';
 import { filterGuitars, sortGuitars } from './GuitarService';
-import deepClone from '../../../utils/deepClone';
-import { Nullable } from '../../../utils/Nullable';
+import deepClone from 'utils/deepClone';
+import { Nullable } from 'utils/Nullable';
 
 export type GuitarListAction =
   | {

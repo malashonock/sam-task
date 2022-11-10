@@ -1,7 +1,7 @@
 import renderer from 'react-test-renderer';
 import { render } from '@testing-library/react';
-import MockShoppingCartContextProvider from '../../../../../mockdata/MockShoppingCartContextProvider';
-import mockShoppingCarts from '../../../../../mockdata/mockShoppingCarts';
+import MockShoppingCartContextProvider from 'mockdata/MockShoppingCartContextProvider';
+import mockShoppingCarts from 'mockdata/mockShoppingCarts';
 import ShoppingCart from '../ShoppingCart';
 
 describe('ShoppingCart component', () => {

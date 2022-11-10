@@ -1,17 +1,17 @@
 import { PropsWithChildren, useEffect, useReducer } from 'react';
-import {
-  parseJsonFromLocalStorage,
-  saveJsonToLocalStorage,
-} from '../../../utils/local-storage-utils';
-import ShoppingCart from './ShoppingCart';
+import { parseJsonFromLocalStorage, saveJsonToLocalStorage } from 'utils/local-storage-utils';
+import ShoppingCart, { IShoppingCart } from './ShoppingCart';
 import ShoppingCartContext from './ShoppingCartContext';
 import { shoppingCartReducer } from './ShoppingCartReducer';
 
 function initShoppingCart(): ShoppingCart {
-  return parseJsonFromLocalStorage<ShoppingCart>('shoppingCart', {
-    guitars: [],
-    pendingOverflow: false,
-  });
+  const shoppingCartDto: IShoppingCart = parseJsonFromLocalStorage<IShoppingCart>(
+    'shoppingCart',
+    new ShoppingCart()
+  );
+
+  const { lineItems, itemsCount, totalAmount, pendingOverflow } = shoppingCartDto;
+  return new ShoppingCart(lineItems, itemsCount, totalAmount, pendingOverflow);
 }
 
 function saveShoppingCart(shoppingCartToSave: ShoppingCart): void {

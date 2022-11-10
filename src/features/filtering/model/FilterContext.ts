@@ -1,6 +1,6 @@
 import { createContext, Dispatch, SetStateAction } from 'react';
 import GuitarFilters from './GuitarFilters';
-import { Undefinable } from '../../../utils/Nullable';
+import { Undefinable } from 'utils/Nullable';
 
 export interface FiltersState {
   filters: GuitarFilters;

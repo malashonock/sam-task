@@ -1,5 +1,5 @@
 import Guitar from './Guitar';
-import Range from '../../../utils/Range';
+import Range from 'utils/Range';
 
 export default interface GuitarRepository {
   guitars: Guitar[];

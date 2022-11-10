@@ -2,8 +2,8 @@ import { useContext } from 'react';
 import FilterContext, { FiltersState } from '../../model/FilterContext';
 import { CheckedChangedEvent } from '../../model/CheckedChangedEvent';
 import { FilterMapper } from '../../model/FilterMapper';
-import deepClone from '../../../../utils/deepClone';
-import { toKebabCase, toSentenceCase } from '../../../../utils/case-translator';
+import deepClone from 'utils/deepClone';
+import { toKebabCase, toSentenceCase } from 'utils/case-translator';
 import FilterOption from '../FilterOption/FilterOption';
 
 interface FilterProps<TValue> {

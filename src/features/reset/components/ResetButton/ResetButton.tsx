@@ -1,14 +1,14 @@
 import { MouseEvent, useContext } from 'react';
-import FilterContext, { FiltersState } from '../../../filtering/model/FilterContext';
-import GuitarContext from '../../../guitars/model/GuitarContext';
-import SortingContext, { SortingState } from '../../../sorting/model/SortingContext';
-import GuitarFilters from '../../../filtering/model/GuitarFilters';
-import GuitarRepository from '../../../guitars/model/GuitarRepository';
-import GuitarSorting from '../../../sorting/model/GuitarSorting';
-import { Nullable } from '../../../../utils/Nullable';
+import FilterContext, { FiltersState } from 'features/filtering/model/FilterContext';
+import GuitarContext from 'features/guitars/model/GuitarContext';
+import SortingContext, { SortingState } from 'features/sorting/model/SortingContext';
+import GuitarFilters from 'features/filtering/model/GuitarFilters';
+import GuitarRepository from 'features/guitars/model/GuitarRepository';
+import GuitarSorting from 'features/sorting/model/GuitarSorting';
+import { Nullable } from 'utils/Nullable';
 import ShoppingCartContext, {
   ShoppingCartState,
-} from '../../../shoppingCart/model/ShoppingCartContext';
+} from 'features/shoppingCart/model/ShoppingCartContext';
 
 interface ResetOption {
   id: string;

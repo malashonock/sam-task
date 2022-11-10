@@ -1,11 +1,8 @@
 import { PropsWithChildren, useEffect, useState } from 'react';
 import SortingContext from './SortingContext';
 import GuitarSorting from './GuitarSorting';
-import {
-  parseJsonFromLocalStorage,
-  saveJsonToLocalStorage,
-} from '../../../utils/local-storage-utils';
-import { Nullable } from '../../../utils/Nullable';
+import { parseJsonFromLocalStorage, saveJsonToLocalStorage } from 'utils/local-storage-utils';
+import { Nullable } from 'utils/Nullable';
 
 function initSorting(): Nullable<GuitarSorting> {
   return parseJsonFromLocalStorage<Nullable<GuitarSorting>>('sorting', null);

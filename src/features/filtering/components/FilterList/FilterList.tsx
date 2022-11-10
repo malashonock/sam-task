@@ -1,9 +1,9 @@
 import { useContext } from 'react';
-import GuitarContext from '../../../guitars/model/GuitarContext';
+import GuitarContext from 'features/guitars/model/GuitarContext';
 import Filter from '../Filter/Filter';
 import { FilterMapper } from '../../model/FilterMapper';
 import RangeFilter from '../RangeFilter/RangeFilter';
-import GuitarRepository from '../../../guitars/model/GuitarRepository';
+import GuitarRepository from 'features/guitars/model/GuitarRepository';
 
 export default function FilterList(): JSX.Element {
   const { categories, brands, colors, priceRange }: GuitarRepository = useContext(

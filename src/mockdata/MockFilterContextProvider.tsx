@@ -1,6 +1,6 @@
 import { PropsWithChildren, useState } from 'react';
-import FilterContext from '../features/filtering/model/FilterContext';
-import GuitarFilters from '../features/filtering/model/GuitarFilters';
+import FilterContext from 'features/filtering/model/FilterContext';
+import GuitarFilters from 'features/filtering/model/GuitarFilters';
 
 export default function MockFilterContextProvider({
   mockFilters,

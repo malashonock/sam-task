@@ -1,4 +1,4 @@
-import Guitar from '../features/guitars/model/Guitar';
+import Guitar from 'features/guitars/model/Guitar';
 
 const guitar1: Guitar = {
   category: 'Electric guitars',

@@ -1,9 +1,9 @@
 import { MDCSlider } from '@material/slider';
 import { MutableRefObject, useCallback, useEffect, useRef, useState } from 'react';
-import { EventCallback } from '../../../../utils/EventCallback';
-import { Nullable, Undefinable } from '../../../../utils/Nullable';
-import Range from '../../../../utils/Range';
-import useFirstRender from '../../../../utils/useFirstRender';
+import { EventCallback } from 'utils/EventCallback';
+import { Nullable, Undefinable } from 'utils/Nullable';
+import Range from 'utils/Range';
+import useFirstRender from 'utils/useFirstRender';
 import './RangeSlider.scss';
 
 interface RangeSliderProps {

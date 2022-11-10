@@ -1,8 +1,8 @@
 import { Toast } from 'bootstrap';
 import { MutableRefObject, useContext, useEffect, useRef } from 'react';
 import ShoppingCartContext, { ShoppingCartState } from '../../model/ShoppingCartContext';
-import useFirstRender from '../../../../utils/useFirstRender';
-import { Nullable, Undefinable } from '../../../../utils/Nullable';
+import useFirstRender from 'utils/useFirstRender';
+import { Nullable, Undefinable } from 'utils/Nullable';
 
 export default function CartOverflowToast(): JSX.Element {
   const toastRootRef: MutableRefObject<Nullable<HTMLDivElement>> = useRef<HTMLDivElement>(null);
