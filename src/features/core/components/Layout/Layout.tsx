@@ -21,11 +21,11 @@ export default function Layout(): JSX.Element {
           <ResetButton />
         </aside>
         <div className="col">
-          <div className="row mb-3">
+          <div className="row mb-3 d-flex flex-sm-column flex-xl-row">
             <div className="col">
               <SearchBox />
             </div>
-            <div className="col-6 col-xl-4 col-xxl-3">
+            <div className="col col-xl-6 col-xl-4 col-xxl-3">
               <Sorter />
             </div>
           </div>

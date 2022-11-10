@@ -52,7 +52,7 @@ export default function Sorter(): JSX.Element {
   }, [handleSelectionChanged, isFirstRender, sorting]);
 
   return (
-    <div className="mdc-select mdc-select--outlined m-3" ref={selectRootRef}>
+    <div className="mdc-select mdc-select--outlined my-3" ref={selectRootRef}>
       <div className="mdc-select__anchor" aria-labelledby="sorting-label sorting-selected-text">
         <span className="mdc-notched-outline">
           <span className="mdc-notched-outline__leading" />

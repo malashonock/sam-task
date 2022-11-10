@@ -56,7 +56,7 @@ export default function SearchBox(): JSX.Element {
 
   return (
     <div
-      className="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon mdc-text-field--with-trailing-icon m-3"
+      className="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon mdc-text-field--with-trailing-icon my-3"
       ref={textFieldRootRef}
     >
       <i className="material-icons mdc-text-field__icon mdc-text-field__icon--leading">search</i>
