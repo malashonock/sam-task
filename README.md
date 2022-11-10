@@ -1,46 +1,61 @@
-# Getting Started with Create React App
+# Test Task for SaM Solutions Internship
+
+## Running the app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In the project directory, run `npm start`, then open [http://localhost:3000](http://localhost:3000) to view the app in the browser.
 
-## Available Scripts
+## Implemented features
 
-In the project directory, you can run:
+- Guitar cards are fetched from the local json file.
+- Filter dimension values are defined dynamically, based off the actual contents of the json file.
+- Filtering is available by:
+  - Category
+  - Brand
+  - Color
+  - Availability in stock
+  - Price range
+- Guitars can also be filtered by model using an arbitrary text query
+- Sorting is available by:
+  - Model (alphabetically)
+  - Price
+- Each guitar card has the following content:
+  - Photo
+  - Model name
+  - Price
+  - Add to cart/Add one more button
+- Shopping car is implemented as follows:
+  - Clicking on Add to cart/Add one more adds +1 item to cart
+  - Line items are removed as a whole by clicking on the close button in the cart
+  - Checkout button is disabled if no items has been added to cart yet
+  - The cart icon has a badge that indicates the total number of items added to cart
+  - At the bottom of the cart the total amount of the order is shown
+  - The cart cannot have more than 20 items. Any attempt to add more items is blocked with a popup message.
+  - Clicking on the Checkout button shows a popup message that either dismisses after 3s or can be closed, after which the shopping cart is emptied.
+- The user has a few options to clear selections:
+  - Clear shopping cart
+  - Clear filters
+  - Reset sorting
+  - Clear everything
+- Filters, sorting and shopping cart state are persisted to local storage
 
-### `npm start`
+## Technologies used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- TypeScript
+- React:
+  - create-react-app
+  - function components
+  - hooks: useState, useContext, useReducer
+- Vanilla Bootstrap:
+  - overall layout & styling
+  - accordeons (in all filters except price range)
+  - clear selection and other buttons
+  - badge (in shopping cart icon)
+  - toasts (for shopping cart overflow & checkout notifications)
+- Vanilla Material Design Components:
+  - dual-range slider (in filter by price range)
+  - text field (in search bar)
+  - select (in sorting dropdown)
+- SCSS and SCSS modules for custom styling
+- React Testing Library
+- ESLint with AirBnB config
