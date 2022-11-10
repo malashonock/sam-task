@@ -3,6 +3,7 @@ import SearchBox from 'features/filtering/components/SearchBox/SearchBox';
 import GuitarCardList from 'features/guitars/components/GuitarCardList/GuitarCardList';
 import ResetButton from 'features/reset/components/ResetButton/ResetButton';
 import CartOverflowToast from 'features/shoppingCart/components/CartOverflowToast/CartOverflowToast';
+import Checkout from 'features/shoppingCart/components/Checkout/Checkout';
 import ShoppingCart from 'features/shoppingCart/components/ShoppingCart/ShoppingCart';
 import Sorter from 'features/sorting/components/Sorter/Sorter';
 import styles from './Layout.module.scss';
@@ -19,7 +20,7 @@ export default function Layout(): JSX.Element {
         </div>
       </header>
       <main className="row">
-        <aside className="col-3 col-xl-2 d-flex flex-column align-align-items-stretch">
+        <aside className="col-3 col-xl-2 d-flex flex-column align-items-stretch">
           <FilterList />
           <ResetButton />
         </aside>
@@ -34,6 +35,9 @@ export default function Layout(): JSX.Element {
           </div>
           <GuitarCardList />
         </div>
+        <aside className="col-3 col-xl-2 d-flex flex-column p-3">
+          <Checkout />
+        </aside>
       </main>
       <footer className="d-flex justify-content-between align-items-center py-3">
         <div className="author fw-bold">
