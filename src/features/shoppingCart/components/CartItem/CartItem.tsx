@@ -1,4 +1,8 @@
+import ShoppingCartContext, {
+  ShoppingCartState,
+} from 'features/shoppingCart/model/ShoppingCartContext';
 import ShoppingCartLineItem from 'features/shoppingCart/model/ShoppingCartLineItem';
+import { useContext } from 'react';
 import getCurrencyString from 'utils/currency-format';
 
 interface CartItemProps {
@@ -6,6 +10,12 @@ interface CartItemProps {
 }
 
 export default function CartItem({ item }: CartItemProps): JSX.Element {
+  const { dispatchShoppingCartAction } = useContext(ShoppingCartContext) as ShoppingCartState;
+
+  const handleRemove = (): void => {
+    dispatchShoppingCartAction({ type: 'remove', item: item.sku });
+  };
+
   return (
     <div className="cart-item">
       <div className="cart-item__info">
@@ -16,7 +26,7 @@ export default function CartItem({ item }: CartItemProps): JSX.Element {
           <span className="cart-item__quantity">{item.quantity}</span>
         </div>
       </div>
-      <button className="btn btn-close cart-item__remove-btn" />
+      <button className="btn btn-close cart-item__remove-btn" onClick={handleRemove} />
     </div>
   );
 }
