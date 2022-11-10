@@ -1,0 +1,32 @@
+@import '~bootstrap/scss/functions';
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.card {
+  width: var(--card-width);
+  min-width: var(--card-width);
+  transition: 0.25s ease;
+
+  &:hover {
+    filter: drop-shadow(0 0 3px grey);
+    transition: 0.25s ease;
+  }
+}
+
+@include media-breakpoint-up(xs) {
+  .card {
+    --card-width: 190px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .card {
+    --card-width: 230px;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .card {
+    --card-width: 270px;
+  }
+}

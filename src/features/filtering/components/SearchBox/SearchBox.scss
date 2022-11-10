@@ -1,0 +1,13 @@
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+@use "@material/textfield/icon";
+@use "@material/icon-button";
+
+@include textfield.core-styles;
+@import "@material/icon-button/mdc-icon-button";
+
+.mdc-text-field {
+  width: 100%;
+}
