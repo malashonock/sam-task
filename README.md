@@ -2,9 +2,9 @@
 
 ## Running the app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-In the project directory, run `npm start`, then open [http://localhost:3000](http://localhost:3000) to view the app in the browser.
-Or you can visit the deployed version at [https://malashonock-online-store.netlify.app](https://malashonock-online-store.netlify.app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
+In the project directory, run `npm start`, then open [http://localhost:3000](http://localhost:3000) to view the app in the browser.  
+Alternatively, you can visit the deployed version at [https://malashonock-online-store.netlify.app](https://malashonock-online-store.netlify.app).  
 
 ## Implemented features
 
