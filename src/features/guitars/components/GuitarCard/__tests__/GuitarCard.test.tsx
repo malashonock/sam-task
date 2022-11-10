@@ -42,7 +42,7 @@ describe('GuitarCard component', () => {
     });
 
     describe('given that guitar prop IS in the shopping cart', () => {
-      it('has class "btn-danger"', () => {
+      it('has class "btn-warning"', () => {
         const { container } = render(
           <MockShoppingCartContextProvider mockShoppingCart={mockShoppingCarts.oneGuitarNoOverflow}>
             <GuitarCard guitar={mockGuitars.oneGuitar[0]} />
@@ -50,10 +50,10 @@ describe('GuitarCard component', () => {
         );
 
         const button = container.querySelector('.btn');
-        expect(button).toHaveClass('btn-danger');
+        expect(button).toHaveClass('btn-warning');
       });
 
-      it('has text "Remove from cart"', () => {
+      it('has text "Add one more"', () => {
         const { container } = render(
           <MockShoppingCartContextProvider mockShoppingCart={mockShoppingCarts.oneGuitarNoOverflow}>
             <GuitarCard guitar={mockGuitars.oneGuitar[0]} />
@@ -61,7 +61,7 @@ describe('GuitarCard component', () => {
         );
 
         const button = container.querySelector('.btn');
-        expect(button).toHaveTextContent('Remove from cart');
+        expect(button).toHaveTextContent('Add one more');
       });
     });
   });
